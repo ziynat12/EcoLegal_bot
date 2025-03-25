@@ -1,0 +1,13 @@
+# O'zbekiston ekologik qonunlari bo'yicha ma'lumotlar
+laws = {
+    "daraxt kesish": "O‘zbekiston Respublikasi Ma'muriy javobgarlik to‘g‘risidagi kodeksi 79-moddasiga ko‘ra, noqonuniy daraxt kesish uchun jarima yoki boshqa chora ko‘riladi.",
+    "havoni ifloslantirish": "Havoni ataylab yoki ehtiyotsizlik tufayli ifloslantirish ekologik qonunlarga zid bo‘lib, Ma’muriy javobgarlik kodeksiga muvofiq jarimaga tortiladi.",
+    "hayvonlarga zarar yetkazish": "Qizil kitobga kiritilgan hayvonlarga zarar yetkazish yoki ularni o‘ldirish uchun jinoiy javobgarlik mavjud.",
+}
+
+def get_law_response(query):
+    """Foydalanuvchi savoliga mos keladigan qonuniy javobni qaytaradi"""
+    for key in laws:
+        if key in query.lower():
+            return laws[key]
+    return "Kechirasiz, bu bo‘yicha qonuniy maʼlumot topilmadi."
