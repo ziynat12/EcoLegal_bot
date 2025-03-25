@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 # API kalitlarini yuklash
 load_dotenv()
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TOKEN = os.getenv("TOKEN")
 
 if not TOKEN:
     raise ValueError("Bot tokeni topilmadi! Iltimos, .env faylda TOKENni tekshiring.")
